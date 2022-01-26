@@ -68,7 +68,7 @@ function AddBottle(){
                     Region:
                     <select value={region} onChange={(e => setRegion(e.target.value))}>
                         <option value="unknown">Unknown</option>
-                        <option value="cambeltown">Cambeltown</option>
+                        <option value="campbeltown">Campbeltown</option>
                         <option value="highland">Highland</option>
                         <option value="islay">Islay</option>
                         <option value="lowland">Lowland</option>
