@@ -1,5 +1,6 @@
 import React from "react";
-import BottleWindow from "./BottleWindow";
+import BottleList from "./BottleList";
+import AddBottle from "./AddBottle";
 
 function Home(){    
 
@@ -7,7 +8,8 @@ function Home(){
         <div>
             <h1>Water of Life</h1>
             <h2>Explore the World of Scotch</h2>
-            <BottleWindow />
+            <BottleList />
+            <AddBottle />
         </div>
     )
 }
