@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AddDistillery from "./AddDistillery";
 import Distillery from "./Distillery.js";
 
-function Region({ name, distilleries }){
+function Region({ name, distilleries, imgUrl }){
 
     const [stateDistilleries, setStateDistilleries] = useState(distilleries)
 
@@ -23,6 +23,7 @@ function Region({ name, distilleries }){
     return (
         <div>
             <h2>{name}</h2>
+            <img src={imgUrl} alt={`${name} Landscape`} width="20%"/>
             <AddDistillery handleAddDistillery={addDistilleryHandler} region={name} />
             {distilleryItems}
         </div>
