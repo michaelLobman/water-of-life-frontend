@@ -1,9 +1,16 @@
-import React from "react"
-import Distillery from "./Distillery.js"
+import React, { useState } from "react";
+import AddDistillery from "./AddDistillery";
+import Distillery from "./Distillery.js";
 
 function Region({ name, distilleries }){
 
-    const distilleryItems = distilleries.map(distillery => {
+    const [stateDistilleries, setStateDistilleries] = useState(distilleries)
+
+    function addDistilleryHandler(newDistillery) {
+         setStateDistilleries([...stateDistilleries, newDistillery])
+    }
+
+    const distilleryItems = stateDistilleries.map(distillery => {
         return (
             <Distillery 
                 key={distillery.id} 
@@ -13,32 +20,10 @@ function Region({ name, distilleries }){
         )
     })
 
-    // const distilleryList = distilleries.map(distillery => {
-
-    //     const bottleListItems = distillery.bottles.map(bottle => {
-    //         return(
-    //             <li key={bottle.id}>{bottle.name}</li>
-    //         )
-    //     })
-
-    //     return (
-    //     <div key={distillery.id}>
-    //         <h3>{distillery.name}</h3>
-    //         <ul>
-    //             {bottleListItems}
-    //         </ul>
-    //     </div>
-    // )})
-    // return(
-    //     <div>
-    //         <h2>{name}</h2>
-    //         {distilleryList}
-    //     </div>
-    // )
-
     return (
         <div>
             <h2>{name}</h2>
+            <AddDistillery handleAddDistillery={addDistilleryHandler} region={name} />
             {distilleryItems}
         </div>
     )

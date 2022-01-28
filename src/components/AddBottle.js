@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddBottle({ distillery }){
+function AddBottle({ handleAddBottle, distillery }){
 
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
@@ -17,12 +17,12 @@ function AddBottle({ distillery }){
         fetch("http://localhost:9294/bottles", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "application/json"
             },
             body: JSON.stringify(bottleData)
         })
             .then(r => r.json())
-            .then(addedBottle => console.log(addedBottle))
+            .then(addedBottle => handleAddBottle(addedBottle))
     }
    
     return(

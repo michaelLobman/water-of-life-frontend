@@ -1,10 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import Bottle from "./Bottle.js"
 import AddBottle from "./AddBottle"
 
 function Distillery({ name, bottles }){
+    const [stateBottles, setStateBottles] = useState(bottles)
 
-    const bottleItems = bottles.map(bottle => {
+    function addBottleHandler(newBottle){
+        setStateBottles([...stateBottles, newBottle])
+    }
+
+    const bottleItems = !stateBottles ? null : stateBottles.map(bottle => {
         return (
             <Bottle 
                 key={bottle.id}
@@ -21,7 +26,7 @@ function Distillery({ name, bottles }){
         <div>
             <h3>{name}</h3>
             {bottleItems}
-            <AddBottle distillery={name} />
+            <AddBottle handleAddBottle={addBottleHandler} distillery={name} />
         </div>
 
     )

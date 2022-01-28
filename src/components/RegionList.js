@@ -8,7 +8,6 @@ function RegionList(){
         fetch("http://localhost:9294/regions/bottles")
             .then(r => r.json())
             .then(data => {
-                debugger;
                 setRegions(data)
             })
     }, [])
