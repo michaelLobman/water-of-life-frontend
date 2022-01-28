@@ -1,5 +1,6 @@
 import React from "react"
 import Bottle from "./Bottle.js"
+import AddBottle from "./AddBottle"
 
 function Distillery({ name, bottles }){
 
@@ -9,6 +10,7 @@ function Distillery({ name, bottles }){
                 key={bottle.id}
                 name={bottle.name}
                 age={bottle.aged_in_years}
+                distillery={name}
             />
         )
 
@@ -19,6 +21,7 @@ function Distillery({ name, bottles }){
         <div>
             <h3>{name}</h3>
             {bottleItems}
+            <AddBottle distillery={name} />
         </div>
 
     )

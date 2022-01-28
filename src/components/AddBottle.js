@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 
-function AddBottle(){
+function AddBottle({ distillery }){
 
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
-    const [distillery, setDistillery] = useState("");
-    const [region, setRegion] = useState("Cambeltown");
-    // const [img, setImg] = useState("");
 
     function handleSubmit(e){
         e.preventDefault();
@@ -15,7 +12,6 @@ function AddBottle(){
             name: name,
             age: parseInt(age),
             distillery: distillery,
-            region: region
         }
 
         fetch("http://localhost:9294/bottles", {
@@ -31,7 +27,7 @@ function AddBottle(){
    
     return(
         <div>
-            <h3>Favorite bottle missing? Add it below!</h3>
+            <h5>Favorite {distillery} bottle missing? Add it below!</h5>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:
@@ -53,27 +49,6 @@ function AddBottle(){
                         value={age}
                         min="0"
                     />
-                </label>
-                <label>
-                    Distillery:
-                    <input
-                        type="text"
-                        id="distillery"
-                        name="distillery"
-                        onChange={(e => setDistillery(e.target.value))}
-                        value={distillery}
-                    />
-                </label>
-                <label>
-                    Region:
-                    <select value={region} onChange={(e => setRegion(e.target.value))}>
-                        <option value="unknown">Unknown</option>
-                        <option value="campbeltown">Campbeltown</option>
-                        <option value="highland">Highland</option>
-                        <option value="islay">Islay</option>
-                        <option value="lowland">Lowland</option>
-                        <option value="speyside">Speyside</option>
-                    </select>
                 </label>
                 <input type="submit"/>
             </form>
