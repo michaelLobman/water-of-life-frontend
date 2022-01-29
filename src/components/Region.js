@@ -2,14 +2,22 @@ import React, { useState } from "react";
 import AddDistillery from "./AddDistillery";
 import Distillery from "./Distillery.js";
 
-function Region({ name, distilleries, imgUrl }){
+function Region({ name, distilleries, description, imgUrl }){
 
     const [stateDistilleries, setStateDistilleries] = useState(distilleries)
+    const [addDistilleryDisplay, setAddDistilleryDisplay] = useState(false)
 
     function addDistilleryHandler(newDistillery) {
          setStateDistilleries([...stateDistilleries, newDistillery])
     }
 
+    function handleClick(e){
+        e.preventDefault()
+        setAddDistilleryDisplay(!addDistilleryDisplay)
+    }
+
+    const toggleAddDistillery = !addDistilleryDisplay ? null : <AddDistillery handleAddDistillery={addDistilleryHandler} region={name} />;
+    const distilleryBtnText = !addDistilleryDisplay ? `Add ${name} Distillery` : `Hide ${name} Distillery Form`;
     const distilleryItems = stateDistilleries.map(distillery => {
         return (
             <Distillery 
@@ -21,16 +29,19 @@ function Region({ name, distilleries, imgUrl }){
     })
 
     return (
-        <div>
-            <div className="region-container">
-                <h2 className="region-name">{name}</h2>
-                <img 
-                    src={imgUrl} 
-                    alt={`${name} Landscape`} 
-                    className="region-img"
-                />
+        <div className="region-container">
+                <div className="region-text-container">
+                    <h2 className="region-name">{name}</h2>
+                    <img 
+                        src={imgUrl} 
+                        alt={`${name} Landscape`} 
+                        className="region-img"
+                    />
                 </div>
-            <AddDistillery handleAddDistillery={addDistilleryHandler} region={name} />
+                <p className="region-description">{description}</p>
+            <button onClick={handleClick} className="add-btn">{distilleryBtnText}</button>
+            {toggleAddDistillery}
+            <h3>{name} Distilleries</h3>
             {distilleryItems}
         </div>
     )

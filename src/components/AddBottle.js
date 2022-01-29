@@ -14,7 +14,7 @@ function AddBottle({ handleAddBottle, distillery }){
             distillery: distillery,
         }
 
-        fetch("http://localhost:9294/bottles", {
+        fetch("http://localhost:9296/bottles", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

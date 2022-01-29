@@ -6,7 +6,7 @@ function Home(){
     const [regions, setRegions] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:9294/regions/bottles")
+        fetch("http://localhost:9296/regions/bottles")
             .then(r => r.json())
             .then(data => setRegions(data))
     }, [])
@@ -17,6 +17,7 @@ function Home(){
                 key={region.id} 
                 name={region.name} 
                 imgUrl={region.img_url}
+                description={region.description}
                 distilleries={region.distilleries} 
             />
         )
@@ -25,9 +26,8 @@ function Home(){
     return (
         <div>
             <header>
-                <h1 className="header">Water of Life</h1>
+                <h1 className="header">Water of Life - An API of Scotch Whisky</h1>
             </header>
-            <h2>Explore the Different Regions of Scotland</h2>
             {regionItems}
         </div>
     )

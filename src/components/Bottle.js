@@ -3,9 +3,7 @@ import React from "react"
 function Bottle ({ name, age }){
 
     return (
-        <div>
-            <p>{name} ({age ? age : "Age Not Specified"})</p>
-        </div>
+        <li>{name} ({age ? age : "Age Not Specified"})</li>
     )
 }
 

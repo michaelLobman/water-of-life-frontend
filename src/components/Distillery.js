@@ -4,10 +4,19 @@ import AddBottle from "./AddBottle"
 
 function Distillery({ name, bottles }){
     const [stateBottles, setStateBottles] = useState(bottles)
+    const [addBottleDisplay, setAddBottleDisplay] = useState(false)
 
     function addBottleHandler(newBottle){
         setStateBottles([...stateBottles, newBottle])
     }
+
+    function handleClick(e){
+        e.preventDefault()
+        setAddBottleDisplay(!addBottleDisplay)
+    }
+
+    const toggleAddBottle = !addBottleDisplay ? null : <AddBottle handleAddBottle={addBottleHandler} distillery={name} />;
+    const addBottleText = !addBottleDisplay ? `Add ${name} Bottle` : `Hide ${name} Bottle Form`;
 
     const bottleItems = !stateBottles ? null : stateBottles.map(bottle => {
         return (
@@ -18,15 +27,18 @@ function Distillery({ name, bottles }){
                 distillery={name}
             />
         )
-
     }
 
     )
     return(
         <div>
             <h3>{name}</h3>
-            {bottleItems}
-            <AddBottle handleAddBottle={addBottleHandler} distillery={name} />
+            <h4>Whiskies:</h4>
+            <ul>
+                {bottleItems}
+            </ul>
+            <button className="add-btn" onClick={handleClick}>{addBottleText}</button>
+            {toggleAddBottle}
         </div>
 
     )

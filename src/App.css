@@ -1,7 +1,6 @@
 body {
   font-family: Helvetica, sans-serif;
-  background-color: darkslategray;
-  color: wheat;
+  background-color: white;
   font-weight: lighter;
 }
 
@@ -16,6 +15,10 @@ h2 {
 }
 
 .region-container {
+  padding: 5vw;
+}
+
+.region-text-container {
   position: relative;
 
 }
@@ -26,12 +29,43 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 10vw;
-  color: #e15858;
   font-weight: 100;
+  background-color: white;
+  padding: 1vw;
 }
 
 .region-img{
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.region-description {
+  margin: 5%;
+  font-size: 2.0vw;
+}
+
+.add-btn{
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+  font-size: 2vw;
+  font-weight: lighter;
+  padding: 10px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+.add-btn:hover, add-bottle-btn:hover {
+  border: 1px solid black;
+  background-color: darkslategrey;
+  color: white;
+  cursor: crosshair;
+  
+}
+
+.add-distillery-form {
+  padding: 10px;
+  margin: 5%;
+
 }

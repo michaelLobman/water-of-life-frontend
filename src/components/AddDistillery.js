@@ -13,7 +13,7 @@ function AddDistillery({ handleAddDistillery, region }){
             region: region
         }
 
-        fetch("http://localhost:9294/distilleries", {
+        fetch("http://localhost:9296/distilleries", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -27,8 +27,7 @@ function AddDistillery({ handleAddDistillery, region }){
 
     return(
         <div>
-            <h5>Add {region} distillery:</h5>
-            <form onSubmit={handleSubmit}>
+            <form className="add-distillery-form" onSubmit={handleSubmit}>
                 <label>
                     Distillery:
                     <input
