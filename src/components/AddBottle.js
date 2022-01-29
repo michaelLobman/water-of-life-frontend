@@ -26,33 +26,30 @@ function AddBottle({ handleAddBottle, distillery }){
     }
    
     return(
-        <div>
-            <h5>Favorite {distillery} bottle missing? Add it below!</h5>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input 
-                        type="text" 
-                        id="name"
-                        name="name"
-                        onChange={(e => setName(e.target.value))}
-                        value={name}
-                    />
-                </label>
-                <label>
-                    Age (in years):
-                    <input
-                        type="number"
-                        id="age"
-                        name="age"
-                        onChange={(e => setAge(e.target.value))}
-                        value={age}
-                        min="0"
-                    />
-                </label>
-                <input type="submit"/>
-            </form>
-        </div>
+        <form onSubmit={handleSubmit}>
+            <label>
+                Name:
+                <input 
+                    type="text" 
+                    id="name"
+                    name="name"
+                    onChange={(e => setName(e.target.value))}
+                    value={name}
+                />
+            </label>
+            <label>
+                Age (in years):
+                <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    onChange={(e => setAge(e.target.value))}
+                    value={age}
+                    min="0"
+                />
+            </label>
+            <input type="submit"/>
+        </form>
     )
 }
 
