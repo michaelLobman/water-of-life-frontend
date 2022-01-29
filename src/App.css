@@ -64,8 +64,35 @@ h2 {
   
 }
 
-.add-distillery-form {
-  padding: 10px;
-  margin: 5%;
+form {
+  padding: 2vw;
+  background-color: rgb(233, 242, 221);
+  margin: 5vw;
 
 }
+
+input {
+  display: inline-block;
+  width: 30%;
+  margin: 2vw;
+  padding: 1vw 2vw;
+  border: 1px solid black;
+  display:grid;
+  font-size: 2vw;
+}
+
+input[type=submit]{
+  width: 18%;
+  margin: 5vw 2vw;
+  background-color: white;
+  transition: 0.4s;
+  
+}
+
+input[type=submit]:hover{
+  background-color: darkslategrey;
+  color: white;
+  cursor: crosshair;
+}
+
+

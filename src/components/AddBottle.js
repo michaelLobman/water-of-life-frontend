@@ -35,6 +35,7 @@ function AddBottle({ handleAddBottle, distillery }){
                     name="name"
                     onChange={(e => setName(e.target.value))}
                     value={name}
+                    required
                 />
             </label>
             <label>
@@ -46,6 +47,7 @@ function AddBottle({ handleAddBottle, distillery }){
                     onChange={(e => setAge(e.target.value))}
                     value={age}
                     min="0"
+                    required
                 />
             </label>
             <input type="submit"/>

@@ -27,7 +27,7 @@ function AddDistillery({ handleAddDistillery, region }){
 
     return(
         <div>
-            <form className="add-distillery-form" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Distillery:
                     <input
@@ -36,6 +36,7 @@ function AddDistillery({ handleAddDistillery, region }){
                         name="distillery"
                         value={distillery}
                         onChange={(e => setDistillery(e.target.value))}
+                        required
                     />
                 </label>
                 <label>
@@ -46,6 +47,7 @@ function AddDistillery({ handleAddDistillery, region }){
                         name="year-established"
                         value={year}
                         onChange={(e => setYear(e.target.value))}
+                        required
                     />
                 </label>
                 <input type="submit"/>
