@@ -24,7 +24,9 @@ function Home(){
 
     return (
         <div>
-            <h1>Water of Life</h1>
+            <header>
+                <h1 className="header">Water of Life</h1>
+            </header>
             <h2>Explore the Different Regions of Scotland</h2>
             {regionItems}
         </div>

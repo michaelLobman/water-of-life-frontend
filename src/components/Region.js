@@ -22,8 +22,14 @@ function Region({ name, distilleries, imgUrl }){
 
     return (
         <div>
-            <h2>{name}</h2>
-            <img src={imgUrl} alt={`${name} Landscape`} width="20%"/>
+            <div className="region-container">
+                <h2 className="region-name">{name}</h2>
+                <img 
+                    src={imgUrl} 
+                    alt={`${name} Landscape`} 
+                    className="region-img"
+                />
+                </div>
             <AddDistillery handleAddDistillery={addDistilleryHandler} region={name} />
             {distilleryItems}
         </div>
