@@ -26,7 +26,7 @@ function Home(){
     return (
         <div>
             <header>
-                <h1 className="header">Water of Life - An API of Scotch Whisky</h1>
+                <h1 className="site-h1">Water of Life - An API of Scotch Whisky</h1>
             </header>
             {regionItems}
         </div>

@@ -39,10 +39,12 @@ function Region({ name, distilleries, description, imgUrl }){
                     />
                 </div>
                 <p className="region-description">{description}</p>
-            <button onClick={handleClick} className="add-btn">{distilleryBtnText}</button>
-            {toggleAddDistillery}
-            <h3>{name} Distilleries</h3>
-            {distilleryItems}
+                <div className="distillery-btn-div">
+                    <button onClick={handleClick} className="add-btn">{distilleryBtnText}</button>
+                </div>
+                {toggleAddDistillery}
+                <h3 className="region-h3">{name} Distilleries</h3>
+                {distilleryItems}
         </div>
     )
 }

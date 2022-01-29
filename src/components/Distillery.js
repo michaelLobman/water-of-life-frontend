@@ -31,10 +31,9 @@ function Distillery({ name, bottles }){
 
     )
     return(
-        <div>
-            <h3>{name}</h3>
-            <h4>Whiskies:</h4>
-            <ul>
+        <div className="distillery-div">
+            <h3 className="distillery-h3">{name}</h3>
+            <ul className="bottle-ul">
                 {bottleItems}
             </ul>
             <button className="add-btn" onClick={handleClick}>{addBottleText}</button>

@@ -4,10 +4,11 @@ body {
   font-weight: lighter;
 }
 
-.header {
+.site-h1 {
   text-align: center;
   font-weight: 100;
-  padding: 10px;
+  padding: 5vw 0 0 0;
+  font-size: 5vw;
 }
 
 h2 {
@@ -45,6 +46,14 @@ h2 {
   font-size: 2.0vw;
 }
 
+.region-h3 {
+  color: darkslategrey;
+  font-size: 4vw;
+  text-decoration: underline; 
+  margin: 5vw;
+  text-align: center;
+}
+
 .add-btn{
   border: 1px solid black;
   background-color: white;
@@ -62,6 +71,10 @@ h2 {
   color: white;
   cursor: crosshair;
   
+}
+
+.distillery-btn-div {
+  text-align: center;
 }
 
 form {
@@ -93,6 +106,30 @@ input[type=submit]:hover{
   background-color: darkslategrey;
   color: white;
   cursor: crosshair;
+}
+
+.distillery-div {
+  padding: 0 3vw 6vw 3vw;
+  border-bottom: .5vw solid darkslategrey;
+}
+
+.distillery-h3 {
+  color: darkslategrey;
+  font-size: 3vw;
+  text-decoration: underline;
+
+}
+
+.bottle-ul {
+  list-style-type: none;
+  color: rgb(215, 109, 64);
+  padding: 0 0 1vw 0;
+}
+
+.bottle-li {
+  padding: .5vw;
+  font-size: 2vw;
+
 }
 
 
