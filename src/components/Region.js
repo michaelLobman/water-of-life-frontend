@@ -24,6 +24,7 @@ function Region({ name, distilleries, description, imgUrl }){
                 key={distillery.id} 
                 name={distillery.name}
                 bottles={distillery.bottles}
+                year={distillery.year_established}
             />
         )
     })

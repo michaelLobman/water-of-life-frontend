@@ -6,7 +6,7 @@ function Home(){
     const [regions, setRegions] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:9296/regions/bottles")
+        fetch("http://localhost:9296/")
             .then(r => r.json())
             .then(data => setRegions(data))
     }, [])

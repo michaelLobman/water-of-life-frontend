@@ -116,8 +116,13 @@ input[type=submit]:hover{
 .distillery-h3 {
   color: darkslategrey;
   font-size: 3vw;
-  text-decoration: underline;
+  font-weight: 500;
+}
 
+.distillery-h4 {
+  color: darkslategrey;
+  font-size: 2vw;
+  font-weight: 500;
 }
 
 .bottle-ul {
