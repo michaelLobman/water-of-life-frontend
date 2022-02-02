@@ -7,12 +7,13 @@ function Distillery({ name, bottles, year }){
     const [addBottleDisplay, setAddBottleDisplay] = useState(false)
 
     function addBottleHandler(newBottle){
-        setStateBottles([...stateBottles, newBottle])
+        setStateBottles([...stateBottles, newBottle]);
+        setAddBottleDisplay(!addBottleDisplay);
     }
 
     function handleClick(e){
-        e.preventDefault()
-        setAddBottleDisplay(!addBottleDisplay)
+        e.preventDefault();
+        setAddBottleDisplay(!addBottleDisplay);
     }
 
     function handleDeleteBottle(deletedBottle){

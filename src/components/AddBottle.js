@@ -23,6 +23,9 @@ function AddBottle({ handleAddBottle, distillery }){
         })
             .then(r => r.json())
             .then(addedBottle => handleAddBottle(addedBottle))
+
+        setName("");
+        setAge("");
     }
    
     return(

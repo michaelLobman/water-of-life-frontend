@@ -22,6 +22,9 @@ function AddDistillery({ handleAddDistillery, region }){
         })
             .then(r => r.json())
             .then(addedDistillery => handleAddDistillery(addedDistillery))
+
+        setDistillery("");
+        setYear("");
     }
 
 

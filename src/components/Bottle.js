@@ -17,7 +17,7 @@ function Bottle ({ name, age, id, onDeleteBottle }){
     return (
         <li className="bottle-li">
             {name} ({age ? age : "Age Not Specified"}) 
-            <button onClick={handleDelete}>Remove</button>
+            <button className="delete-btn" onClick={handleDelete}>x</button>
         </li>
     )
 }

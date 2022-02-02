@@ -8,7 +8,8 @@ function Region({ name, distilleries, description, imgUrl }){
     const [addDistilleryDisplay, setAddDistilleryDisplay] = useState(false)
 
     function addDistilleryHandler(newDistillery) {
-         setStateDistilleries([...stateDistilleries, newDistillery])
+         setStateDistilleries([...stateDistilleries, newDistillery]);
+         setAddDistilleryDisplay(!addDistilleryDisplay);
     }
 
     function handleClick(e){
