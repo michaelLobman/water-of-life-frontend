@@ -4,7 +4,7 @@ function Bottle ({ name, age, id, onDeleteBottle }){
 
     function handleDelete(e) {
         e.preventDefault();        
-        fetch(`http://localhost:9296/bottles/${id}`, {
+        fetch(`http://localhost:9292/bottles/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"

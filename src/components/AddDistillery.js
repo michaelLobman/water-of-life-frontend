@@ -13,7 +13,7 @@ function AddDistillery({ handleAddDistillery, region }){
             region: region
         }
 
-        fetch("http://localhost:9296/distilleries", {
+        fetch("http://localhost:9292/distilleries", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
